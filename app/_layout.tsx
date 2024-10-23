@@ -29,10 +29,12 @@ export default function RootLayout() {
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
+
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
         <Stack.Screen name="register" />
         <Stack.Screen name="utama" />
+        <Stack.Screen name="index" />
       </Stack>
     </ThemeProvider>
   );

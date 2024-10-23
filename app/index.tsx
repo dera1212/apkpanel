@@ -18,7 +18,7 @@ export default function App() {
           ref={video}
           style={styles.video}
           source={{
-            uri: "https://res.cloudinary.com/dhwupzo3c/video/upload/f_auto:video,q_auto/v1/aplikasi%20react%20native%20panel%20sosmed/d8h2tkjwubjlhsf3w6wq",
+            uri: "https://res.cloudinary.com/dhwupzo3c/video/upload/f_auto:video,q_auto/v1/aplikasi%20react%20native%20panel%20sosmed/tlpro03lonjgriuqgf2w",
           }}
           resizeMode={ResizeMode.COVER}
           shouldPlay
@@ -35,7 +35,7 @@ export default function App() {
           <Link href="/register" style={styles.link}>
             <ThemedText style={styles.linkColor} type="link">Daftar</ThemedText>
           </Link>
-          <Link href="/" style={styles.link}>
+          <Link href="/order" style={styles.link}>
             <ThemedText style={styles.linkColor} type="link">Login</ThemedText>
           </Link>
         </View>

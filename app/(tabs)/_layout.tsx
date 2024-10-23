@@ -20,16 +20,16 @@ export default function TabLayout() {
         headerShown: false,
       }}>
       <Tabs.Screen
-        name="index"
+        name="beranda"
         options={{
-          title: 'Home',
+          title: 'Beranda',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
           ),
         }}
       />
 
-      
+
       <Tabs.Screen
         name="service"
         options={{
@@ -39,7 +39,7 @@ export default function TabLayout() {
           ),
         }}
       />
-      
+
 
       <Tabs.Screen
         name="order"
@@ -70,8 +70,8 @@ export default function TabLayout() {
             <TabBarIcon name={focused ? 'person' : 'person-outline'} color={color} />
           ),
         }}
-      />    
-      
+      />
+
     </Tabs>
   );
 }

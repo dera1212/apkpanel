@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Stack } from 'expo-router';
-import {View, Image, SafeAreaView, StyleSheet, ScrollView, TextInput, Button} from 'react-native';
+import { View, Image, SafeAreaView, StyleSheet, ScrollView, TextInput, Text } from 'react-native';
 import { red } from 'react-native-reanimated/lib/typescript/reanimated2/Colors';
 import { ThemedText } from '@/components/ThemedText';
 
@@ -15,77 +15,82 @@ const register = () => {
 
   return (
 
-    <View style={{flex: 1}}>
+    <View style={styles.container}>
       <ScrollView>
-    <>
-      <Stack.Screen options={{ headerShown: false }} />
-    
-      <ThemedText style={styles.h1} type="title">Form Daftar!
-      </ThemedText>
-  
-    <View style={styles.Pembungkus}>
-      <Image
-          style={styles.LogoRegis}
-          source={require('../assets/images/fyp.png')}
-      />
-    </View>
-    
-    <SafeAreaView >
-      
-      <label style={styles.label}>Nama</label>
-      <TextInput
-        style={styles.input}
-        placeholder="Isi nama kamu"
-        onChangeText={onChangeName}
-        value={name}
-      />
-      <label style={styles.label}>Username</label>
-      <TextInput
-        style={styles.input}
-        placeholder="Isi username"
-        onChangeText={setUsername}
-        value={uname}
-      />
-      <label style={styles.label}>Email</label>
-      <TextInput
-        style={styles.input}
-        placeholder="Isi email"
-        onChangeText={setingEmail}
-        value={email}
-        autoCorrect={false}
-        autoCapitalize="none"
-      />
-      <label style={styles.label}>Password</label>
-      <TextInput
-        secureTextEntry={true}
-        style={styles.input}
-        placeholder="Isi password"
-        onChangeText={setPassword}
-        value={password}
-        returnKeyType='go'
-        autoCorrect={false}
-      />
-      <label style={styles.label}>No HP (Whatsapp)</label>
-      <TextInput
-        style={styles.input}
-        onChangeText={onChangeNumber}
-        value={number}
-        placeholder="Isi nomor whatsapp"
-        keyboardType="numeric"
-      />
-      <View style={styles.buttonDaftar}>
-        <Link href="/" style={styles.link}>
-            <ThemedText style={styles.linkColor} type="link">Daftar!</ThemedText>
-        </Link>
-      </View>
-    </SafeAreaView>
-    </>
-    </ScrollView>
+        <>
+          <Stack.Screen options={{ headerShown: false }} />
+
+          <ThemedText style={styles.h1} type="title">Form Daftar!
+          </ThemedText>
+
+          <View style={styles.Pembungkus}>
+            <Image
+              style={styles.LogoRegis}
+              source={require('../assets/images/fyp.png')}
+            />
+          </View>
+
+          <SafeAreaView >
+
+            <Text style={styles.label}>Nama</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Isi nama kamu"
+              onChangeText={onChangeName}
+              value={name}
+            />
+            <Text style={styles.label}>Username</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Isi username"
+              onChangeText={setUsername}
+              value={uname}
+            />
+            <Text style={styles.label}>Email</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Isi email"
+              onChangeText={setingEmail}
+              value={email}
+              autoCorrect={false}
+              autoCapitalize="none"
+            />
+            <Text style={styles.label}>Password</Text>
+            <TextInput
+              secureTextEntry={true}
+              style={styles.input}
+              placeholder="Isi password"
+              onChangeText={setPassword}
+              value={password}
+              returnKeyType='go'
+              autoCorrect={false}
+            />
+            <Text style={styles.label}>No HP (Whatsapp)</Text>
+            <TextInput
+              style={styles.input}
+              onChangeText={onChangeNumber}
+              value={number}
+              placeholder="Isi nomor whatsapp"
+              keyboardType="numeric"
+            />
+            <View style={styles.buttonDaftar}>
+              <Link href="/" style={styles.link}>
+                <ThemedText style={styles.linkColor} type="link">Daftar!</ThemedText>
+              </Link>
+            </View>
+          </SafeAreaView>
+        </>
+      </ScrollView>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: 20,
+    paddingBottom: 20,
+  },
   linkColor: {
     color: 'white',
     fontSize: 14,
@@ -101,12 +106,11 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     padding: 10,
     borderRadius: 10,
-    height: 50,
   },
   icon: {
     marginLeft: 10,
   },
-  h1:{
+  h1: {
     fontFamily: 'sans-serif',
     fontSize: 25,
     color: '#ff0055',
